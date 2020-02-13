@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da23402d-155e-45d1-9de4-00e87c47f132" name="Default Changelist" comment="Update pin method.  Not running correctly. Clock may need updating as well, not passing tests.">
+    <list default="true" id="da23402d-155e-45d1-9de4-00e87c47f132" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bm.py" beforeDir="false" afterPath="$PROJECT_DIR$/bm.py" afterDir="false" />
     </list>
@@ -43,8 +43,16 @@
       <option name="presentableId" value="Default" />
       <updated>1581306588334</updated>
       <workItem from="1581306589664" duration="10597000" />
-      <workItem from="1581556998815" duration="3300000" />
+      <workItem from="1581556998815" duration="7468000" />
     </task>
+    <task id="LOCAL-00001" summary="Init clock and update clock to iterate from location to end of buffer pool.">
+      <created>1581560354903</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581560354903</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -62,6 +70,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init clock and update clock to iterate from location to end of buffer pool." />
+    <option name="LAST_COMMIT_MESSAGE" value="Init clock and update clock to iterate from location to end of buffer pool." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="182" key="#Deployment" timestamp="1581560348073">
@@ -84,22 +96,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581365074024" />
-    <state width="1877" height="425" key="GridCell.Tab.0.bottom" timestamp="1581560290132">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1581575553176">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581560290132" />
-    <state width="1877" height="425" key="GridCell.Tab.0.center" timestamp="1581560290131">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581575553176" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1581575553175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581560290131" />
-    <state width="1877" height="425" key="GridCell.Tab.0.left" timestamp="1581560290131">
+    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581575553175" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1581575553175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581560290131" />
-    <state width="1877" height="425" key="GridCell.Tab.0.right" timestamp="1581560290132">
+    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581575553175" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1581575553175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581560290132" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581575553175" />
     <state x="463" y="166" key="SettingsEditor" timestamp="1581306642638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -118,6 +130,6 @@
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581307604938" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CS587_HW1$HW1.coverage" NAME="HW1 Coverage Results" MODIFIED="1581560290123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS587_HW1$HW1.coverage" NAME="HW1 Coverage Results" MODIFIED="1581575553165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
