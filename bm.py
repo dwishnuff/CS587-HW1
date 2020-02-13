@@ -12,19 +12,23 @@ class BufferPoolFullError(Exception):
 class clock:
     def __init__(self):
         # do the required initializations
-
-        pass
+        self.location = 0
 
     def pickVictim(self, buffer):
         # find a victim page using the clock algorithm and return the frame number
         # if all pages in the buffer pool are pinned, raise the exception BufferPoolFullError
-        for i in range(len(buffer)):
+
+        #for i in range(len(buffer)):
+        for i in range(self.location,len(buffer)):
             if buffer[i].pinCount == 0:
-                if buffer[i].referenced == 1:
-                    buffer[i].referenced = 0
+                if buffer[i].referenced == 0:
+                    return buffer[i] #this is victim
+
                 else:
-                    # victim = buffer[i]
-                    return buffer[i]
+                    buffer[i].referenced = 0
+                   # self.location=(self.location+1)%(len(buffer)) ##this is from slide 35, not sure we need the mod
+
+                    self.location = (self.location + 1) #not using mod, just incrementing location
     # pass
 
 
