@@ -15,33 +15,47 @@ class testingBM:
 		status = True
 		
 		print("1) Creating a sample buffer of five frames\n")
+		thisBuffer = bufferManager
 		buf = []
 		for i in range(5):
 			buf.append(frame())
 
 		buf[0].pinCount = 1
 		buf[0].referenced = 1
+		buf[0].frameNumber = 0
 
 		buf[1].pinCount = 0
 		buf[1].referenced = 1
+		buf[1].frameNumber = 1
 
 		buf[2].pinCount = 1
 		buf[2].referenced = 1
+		buf[2].frameNumber = 2
 
 		buf[3].pinCount = 1
 		buf[3].referenced = 1
+		buf[3].frameNumber = 3
 
 		buf[4].pinCount = 0
 		buf[4].referenced = 1
+		buf[4].frameNumber = 4
 		# Consider the above buffer.
 		# The clock algorithm starts at frame 0 (buf[0]) and tries to find a frame with pinCount =0
 		# Clock finds buf[1], flips buf[1].referenced to 0 and continue
 		# Clock finds buf[4], flips buf[4].referenced to 0 and continue
 		# Clock finds buf[1] again and choose it
-		
+		"""
+		for i in range(0,5):
+			print("Buf",i, "PinCount: ",buf[i].pinCount,"\n","referenced ", buf[i].referenced,"\n", "frameNumber ",buf[i].frameNumber,"\n")
+"""
 		print("2) Call the clock algorithm")
 		clk = clock()
-		if clk.pickVictim(buf) != 1:
+		victim = clk.pickVictim(buf)
+		if victim != 1:
+			print(victim)
+			for i in range(0, 5):
+				print("Buf", i, "PinCount: ", buf[i].pinCount, "\n", "referenced ", buf[i].referenced, "\n",
+					  "frameNumber ", buf[i].frameNumber, "\n")
 			print(".... Error: clock algorithm did not chose frame 1.\n")
 			status = False
 			return status
@@ -80,7 +94,7 @@ class testingBM:
 			buf.unpin((pageNumber), True)
 		
 		print(".... Pinning of 10 pages suceeded\n")
-		# buf.printBufferContent()
+		#buf.printBufferContent()
 		
 		print("3) Try to read the content of the 10 created pages")
 		for i in range(10):
@@ -156,10 +170,10 @@ diskMnger = diskManager()
 
 t1 = t.test1()
 
-diskMnger.deleteAllPagesOnDisk()		
+diskMnger.deleteAllPagesOnDisk()
 t2 = t.test2()
 
-diskMnger.deleteAllPagesOnDisk()		
+diskMnger.deleteAllPagesOnDisk()
 t3 = t.test3()
 
 

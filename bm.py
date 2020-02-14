@@ -17,37 +17,17 @@ class clock:
     def pickVictim(self, buffer):
         # find a victim page using the clock algorithm and return the frame number
         # if all pages in the buffer pool are pinned, raise the exception BufferPoolFullError
-        startLocation = self.location
-        current = None
 
-        while current!=startLocation:
-            if self.location>len(buffer):
-                self.location = 0
-            current = self.location
-            for i in range (0,startLocation):
-                if buffer[i].pinCount == 0 and buffer[i].referenced ==0:
-                    self.location+=1
-                    return buffer[i]    #this is victim
-                elif buffer[i].pinCount == 0 and buffer[i].referenced ==1:
-                    buffer[i].referenced = 0
+        for i in range(2*(len(buffer))):
+                if buffer[self.location].pinCount == 0 and buffer[self.location].referenced == 0:
+                    return self.location    #this is victim
+                else:
+                    buffer[self.location].referenced = 0
                     self.location +=1
-                    current+=1
-                elif buffer[i].pinCount >= 1:
-                    self.location +=1
-                    current+=1
-            for i in range(startLocation,len(buffer)):
-                if buffer[i].pinCount == 0 and buffer[i].referenced ==0:
-                    self.location+=1
-                    return buffer[i]    #this is victim
-                elif buffer[i].pinCount == 0 and buffer[i].referenced ==1:
-                    buffer[i].referenced = 0
-                    self.location +=1
-                    current+=1
-                elif buffer[i].pinCount >= 1:
-                    self.location +=1
-                    current+=1
+                    if self.location==len(buffer):
+                        self.location = 0
 
-        #raise BufferPoolFullError ##I'm not calling this correctly, WILL??
+        raise BufferPoolFullError ##I'm not calling this correctly, WILL??
     # pass
 
 
