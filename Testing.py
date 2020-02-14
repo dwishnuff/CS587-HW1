@@ -51,6 +51,7 @@ class testingBM:
 		print("2) Call the clock algorithm")
 		clk = clock()
 		victim = clk.pickVictim(buf)
+		#print(type(victim))
 		if victim != 1:
 			print(victim)
 			for i in range(0, 5):
